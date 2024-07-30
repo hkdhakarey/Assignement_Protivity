@@ -23,7 +23,7 @@ public class CustomerServiceTests
     {
         // Arrange
         var fullName = "Hari Krashna";
-        var dateOfBirth = new DateOnly(1990, 1, 1);
+        var dateOfBirth = new DateOnly(1995, 6, 15);
 
         // Act
         var customer = await _customerService.CreateCustomerAsync(fullName, dateOfBirth);

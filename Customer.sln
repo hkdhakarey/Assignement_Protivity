@@ -12,7 +12,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerApi.BusinessLogic",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerApi.DataAccess", "CustomerApi.DataAccess\CustomerApi.DataAccess.csproj", "{254434BD-FCC7-4EDC-87AB-77886651FE10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerApi.Tests", "CustomerApi.Tests\CustomerApi.Tests.csproj", "{03329767-25FF-4965-83A2-A91722BDBDE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerApi.Tests", "CustomerApi.Tests\CustomerApi.Tests.csproj", "{03329767-25FF-4965-83A2-A91722BDBDE7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ECB5989D-63DE-4AB5-BDAC-4DC7187B2D1A} = {ECB5989D-63DE-4AB5-BDAC-4DC7187B2D1A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
