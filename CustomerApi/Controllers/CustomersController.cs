@@ -29,7 +29,6 @@ public class CustomersController : ControllerBase
         var customer = await _customerService.GetCustomerByIdAsync(id);
         if (customer == null)
             return NotFound();
-
         return Ok(customer);
     }
     [HttpGet("{age:int}")]

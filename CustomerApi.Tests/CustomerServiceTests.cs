@@ -1,3 +1,8 @@
+using CustomerApi.BusinessLogic;
+using CustomerApi.DataAccess;
+using FluentAssertions;
+using Moq;
+
 namespace CustomerApi.Tests;
 
 public class CustomerServiceTests
