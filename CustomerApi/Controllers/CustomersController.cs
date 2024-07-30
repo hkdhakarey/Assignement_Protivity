@@ -23,7 +23,7 @@ namespace CustomerApi
                 return BadRequest(ModelState);
 
             var customer = await _customerService.CreateCustomerAsync(customerDto.FullName, customerDto.DateOfBirth);
-            return CreatedAtAction(nameof(GetCustomerById), new { id = customer.CustomerId }, customer);
+            return Ok(customer.CustomerId);
         }
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetCustomerById(Guid id)

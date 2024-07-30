@@ -20,12 +20,13 @@ namespace CustomerApi.BusinessLogic
             {
                 CustomerId = Guid.NewGuid(),
                 FullName = fullName,
-                DateOfBirth = dateOfBirth
+                DateOfBirth = dateOfBirth,
+                ProfileImage = String.Empty
             };
 
             // Call API to generate profile image
-            var profileImageUrl = $"https://ui-avatars.com/api/?name={Uri.EscapeDataString(fullName)}&format=svg";
-            customer.ProfileImage = await _httpClient.GetStringAsync(profileImageUrl);
+            // var profileImageUrl = $"https://ui-avatars.com/api/?name={Uri.EscapeDataString(fullName)}&format=svg";
+            // customer.ProfileImage = await _httpClient.GetStringAsync(profileImageUrl);
 
             return await _customerRepository.AddCustomerAsync(customer);
         }
