@@ -33,6 +33,14 @@ namespace CustomerApi
                 return NotFound();
             return Ok(customer);
         }
+        [HttpGet]
+        public async Task<IActionResult> GetCustomerList()
+        {
+            var customer = await _customerService.GetCustomerList();
+            if (customer == null)
+                return NotFound();
+            return Ok(customer);
+        }
         [HttpGet("{age:int}")]
         public async Task<IActionResult> GetCustomersByAge(int age)
         {

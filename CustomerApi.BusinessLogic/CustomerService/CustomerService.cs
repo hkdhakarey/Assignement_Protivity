@@ -30,7 +30,10 @@ namespace CustomerApi.BusinessLogic
 
             return await _customerRepository.AddCustomerAsync(customer);
         }
-
+        public async Task<List<Customer>> GetCustomerList()
+        {
+            return await _customerRepository.GetAllCustomer();
+        }
         public async Task<Customer> GetCustomerByIdAsync(Guid id)
         {
             return await _customerRepository.GetCustomerByIdAsync(id);

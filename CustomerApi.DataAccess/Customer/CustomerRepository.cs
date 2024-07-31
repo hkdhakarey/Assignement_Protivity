@@ -17,7 +17,10 @@ namespace CustomerApi.DataAccess
             await _context.SaveChangesAsync();
             return customer;
         }
-
+        public async Task<List<Customer>> GetAllCustomer()
+        {
+            return await _context.Customers.ToListAsync();
+        }
         public async Task<Customer> GetCustomerByIdAsync(Guid id)
         {
             return await _context.Customers.FindAsync(id);
